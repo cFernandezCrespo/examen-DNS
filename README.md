@@ -141,6 +141,14 @@ por los fallos que he estado teniendo en el examen no he conseguido reparar el p
 
 Por ultimo paso para ver los logs simplemente tenemos que ir a nuestro contenedor click derecho "view logs"
 
+![imagen1](imagenes/Screenshot_20231113_173809.png)
+
+Cuando le clicamos nos abrira una terminal con los logs de nuestro contenedor
+
+![imagen1](imagenes/Screenshot_20231113_173823.png)
+
+
+
 ###  Realiza el apartado 9 en la máquina virtual con DNS
 
 Primero tenemos que crear el documento db.tiendadeelectronica.int que podemos copiarlo del anterior ejercicio y nos quedaria algo tal que asi:
