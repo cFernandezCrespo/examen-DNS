@@ -147,7 +147,7 @@ Cuando le clicamos nos abrira una terminal con los logs de nuestro contenedor
 
 ![imagen1](imagenes/Screenshot_20231113_173823.png)
 
-
+(dejo todos los archivos subidos porque realmente creo que lo tengo bien hecho pero por alguna razón los digs no funcionan por si de esa forma si estuvieran correctos sumaran algo)
 
 ###  Realiza el apartado 9 en la máquina virtual con DNS
 
