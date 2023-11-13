@@ -130,14 +130,40 @@ texto	IN	TXT		1234ASDF
 entonces con esto ya hecho el siguiente paso seria comprobar que todo funcione con nuestros comandos 
 ~~~
 dig @172.0.8.152 www.tiendadeelectronica.int
-dig @172.0.8.152 owncloud.tiendadeelectronica.int
-dig @172.0.8.152 txt.tiendadeelectronica.int
+dig owncloud.tiendadeelectronica.int
+dig txt.tiendadeelectronica.int
 ~~~
 
+por los fallos que he estado teniendo en el examen no he conseguido reparar el problema de la red pero se veria esto con una respuesta de answer 
+![imagen1](imagenes/Screenshot_20231113_171151.png)
+ aqui ya me dio el fallo fatal y aun teniendo el documento principal bien no he conseguido que funcione 
+![imagen1](imagenes/Screenshot_20231113_173003.png)
+
+Por ultimo paso para ver los logs simplemente tenemos que ir a nuestro contenedor click derecho "view logs"
 
 ###  Realiza el apartado 9 en la máquina virtual con DNS
 
+Primero tenemos que crear el documento db.tiendadeelectronica.int que podemos copiarlo del anterior ejercicio y nos quedaria algo tal que asi:
 
+![imagen1](imagenes/Screenshot_20231113_171031.png)
 
+Ahora con esto hecho tendremos que comprobar que los digs funcionen (el resto de documentos ya fueron creados con anterioridad)
 
+![imagen2](imagenes/Screenshot_20231113_171510.png)
+
+![imagen3](imagenes/Screenshot_20231113_171530.png)
+
+![imagen4](imagenes/Screenshot_20231113_171457.png)
+
+para ver los logs simplemente tenemos que hacer los siguientes comandos
+~~~
+cd /var/log
+cat auth.log
+~~~
+
+y se veria algo asi
+
+![imagen5](imagenes/Screenshot_20231113_173351.png)
+
+podriamos tambien hacer un grep para ver los cnamed y variantes del mismo por si queremos buscar algo en especifico pero de esta forma comprobamos los logs
 
