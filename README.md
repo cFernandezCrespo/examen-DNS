@@ -107,6 +107,32 @@ un registro de texto con el contenido "1234ASDF"</br>
 Comprueba que todo funciona con el comando "dig"</br>
 Muestra en los logs que el servicio arranca correctamente</br></br></br></br>
 
+en este caso nuestro documento db.tiendadeelectronica.int nos quedaria asi
+~~~
+$TTL 38400	; 10 hours 40 minutes
+@		IN SOA	ns.tiendadeelectronica.int. some.email.address. (
+				10003   ; serial
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				38400      ; minimum (10 hours 40 minutes)
+				)
+@		IN NS	ns.tiendadeelectronica.int.
+ns		IN A		172.0.8.152
+pag1	IN A		172.28.5.4
+pag2	IN A 		172.28.5.7
+www		IN CNAME	172.16.0.1
+global	IN TXT		mensaje
+owncloud	IN	CNAME	www
+texto	IN	TXT		1234ASDF
+~~~
+
+entonces con esto ya hecho el siguiente paso seria comprobar que todo funcione con nuestros comandos 
+~~~
+dig @172.0.8.152 www.tiendadeelectronica.int
+dig @172.0.8.152 owncloud.tiendadeelectronica.int
+dig @172.0.8.152 txt.tiendadeelectronica.int
+~~~
 
 
 ###  Realiza el apartado 9 en la máquina virtual con DNS
