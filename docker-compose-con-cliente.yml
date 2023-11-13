@@ -1,0 +1,27 @@
+services:
+  bind9:
+      image: ubuntu/bind9
+      container_name: bind9.16
+      ports:
+        - "53:53/tcp"
+        - "53:53/udp"
+      networks:
+        bind916_subnet:
+          ipv4_address: 172.0.8.152
+      volumes:
+        - ./conf:/etc/bind
+        - ./zonas:/var/lib/bind
+  cliente:
+    container_name: cliente
+    image: ubuntu
+    tty: true
+    stdin_open: true
+    networks:
+      - bind916_subnet 
+    dns:
+      - 172.0.8.152
+networks:
+  bind916_subnet: 
+    external: true
+
+

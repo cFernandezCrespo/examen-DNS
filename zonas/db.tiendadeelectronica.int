@@ -1,0 +1,16 @@
+$TTL 38400	; 10 hours 40 minutes
+@		IN SOA	ns.tiendadeelectronica.int. some.email.address. (
+				10003   ; serial
+				10800      ; refresh (3 hours)
+				3600       ; retry (1 hour)
+				604800     ; expire (1 week)
+				38400      ; minimum (10 hours 40 minutes)
+				)
+@		IN NS	ns.tiendadeelectronica.int.
+ns		IN A		172.0.8.152
+pag1	IN A		172.28.5.4
+pag2	IN A 		172.28.5.7
+www		IN CNAME	172.16.0.1
+global	IN TXT		mensaje
+owncloud IN	CNAME	www
+texto	IN	TXT		1234ASDF

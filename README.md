@@ -81,11 +81,24 @@ Esto es sumamente importante si trabajamos con varios contenedores, pues si no e
 
 ### ¿Para que sirve el registro CNAME? Pon un ejemplo
 
-
+El registro de "CNAME" significa nombre canónico y su función es hacer que un
+dominio sea un alias para otro. El CNAME generalmente se utiliza para asociar nuevos
+subdominios con dominios ya existentes de registro A.</br></br>
+Supongamos que tienes dos nombres de dominio:</br></br>
+www.ejemplo.com: Este es tu dominio principal donde está alojado tu sitio web.</br>
+blog.ejemplo.com: Quieres que este subdominio apunte al mismo lugar que www.ejemplo.com.</br></br>
+Para lograr esto, puedes usar un registro CNAME en tu configuración DNS:</br></br>
+blog.ejemplo.com. IN CNAME www.ejemplo.com.</br>
+En este ejemplo:</br>
+blog.ejemplo.com: Es el subdominio para el cual estás configurando el CNAME.</br>
+CNAME: Indica que este es un registro CNAME.</br>
+www.ejemplo.com.: Es el nombre canónico al cual el subdominio apunta.</br>
 
 ###  ¿Como puedo hacer para que la configuración de un contenedor DNS no se borre si creo otro contenedor?
 
-
+Mientras lo hagas con un docker compose lo tienes guardado siempre con la misma configuración,
+además de que docker de base guarda los contenedores a no ser que tu de forma activa busques
+eliminarlos.
 
 ###  Añade una zona tiendadeelectronica.int en tu docker DNS que tenga
 www a la IP 172.16.0.1 </br>
